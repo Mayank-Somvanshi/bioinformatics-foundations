@@ -23,13 +23,12 @@ The repository tracks progressive development from raw nucleotide manipulation t
 ---
 
 ## Key Capabilities Implemented
-
-* **Strict Sequence Validation:** Checks raw sequence strings against valid IUPAC standard single-letter nucleotide and IUPAC ambiguity alphabets.
-* **Compositional Metrics:** Computes overall GC percentage, AT/GC skew ratios, and local composition variations.
+* **Stateful OOP Architecture:** Encapsulates sequence validation, state management, and biological transformations within a native `DNASequence` Python class, validated against real NCBI data (e.g., human HBB gene).
+* **Strict Sequence Validation:** Checks raw sequence strings against valid IUPAC standard single-letter nucleotide and ambiguity alphabets using $O(N)$ set-based validation.
+* **Compositional Metrics:** Computes overall GC percentage, AT/GC skew ratios, and local composition variations, outputting structured data dictionaries for downstream NumPy/Pandas integration.
 * **Central Dogma Logic:** Implements DNA-to-RNA transcription, RNA-to-cDNA reverse transcription, and reverse complement generation using directional base pairing ($5' \rightarrow 3'$).
-* **Flat-File Parsing:** Implements native line-by-line streaming of multiline FASTA records to prevent high-memory overhead on large sequence entries.
-* **Mutation & Motif Scanners:** Identifies point mutations (transitions vs. transversions), calculates sequence hamming distance, and locates biological target motifs.
-
+* **Flat-File Parsing & Sanitization:** Implements native line-by-line streaming and string sanitization of multiline FASTA records to prevent high-memory overhead on large sequence entries.
+* **Algorithmic Motif Scanning:** Identifies point mutations, calculates sequence hamming distance, and utilizes a sliding-window search algorithm returning standard 1-based biological sequence coordinates.
 ---
 
 ## Getting Started
