@@ -27,10 +27,10 @@ The repository tracks progressive development from raw nucleotide manipulation t
 
 * **Stateful OOP Architecture:** Encapsulates sequence validation, state management, and biological transformations within a native `DNASequence` Python class, validated against real NCBI data (e.g., human HBB gene).
 * **Strict Sequence Validation:** Checks raw sequence strings against valid IUPAC standard single-letter nucleotide and ambiguity alphabets using $O(N)$ set-based validation.
-* **Compositional Metrics:** Computes overall GC percentage, AT/GC skew ratios, and local composition variations, outputting structured data dictionaries for downstream NumPy/Pandas integration.
-* **Central Dogma Logic:** Implements DNA-to-RNA transcription, RNA-to-cDNA reverse transcription, and reverse complement generation using directional base pairing ($5' \rightarrow 3'$).
+* **Compositional Metrics:** Computes overall GC percentage and local composition variations, outputting structured data dictionaries for downstream processing.
+* **Central Dogma Logic:** Implements DNA-to-RNA transcription and reverse complement generation using directional base pairing ($5' \rightarrow 3'$).
 * **Flat-File Parsing & Sanitization:** Implements native line-by-line streaming and string sanitization of multiline FASTA records to prevent high-memory overhead on large sequence entries.
-* **Algorithmic Motif Scanning:** Identifies point mutations, calculates sequence hamming distance, and utilizes a sliding-window search algorithm returning standard 1-based biological sequence coordinates.
+* **Algorithmic Motif Scanning:** Identifies point mutations and utilizes a sliding-window search algorithm returning standard 1-based biological sequence coordinates.
 
 ---
 
